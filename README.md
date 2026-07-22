@@ -6,11 +6,11 @@ A full-stack CRUD application for managing student records, built with React on 
 
 ## Tech Stack
 
-| Layer    | Technology                        |
-| -------- | --------------------------------- |
-| Frontend | React 19, Vite, Axios             |
-| Backend  | FastAPI, Python, Pydantic         |
-| Database | PostgreSQL (Neon DB recommended)  |
+| Layer    | Technology                       |
+| -------- | -------------------------------- |
+| Frontend | React 19, Vite, Axios            |
+| Backend  | FastAPI, Python, Pydantic        |
+| Database | PostgreSQL (Neon DB recommended) |
 
 ---
 
@@ -107,17 +107,17 @@ The app will be available at `http://localhost:5173`.
 
 ### Backend — `.env`
 
-| Variable       | Description                              |
-| -------------- | ---------------------------------------- |
-| `DATABASE_URL` | Full PostgreSQL connection string        |
+| Variable       | Description                       |
+| -------------- | --------------------------------- |
+| `DATABASE_URL` | Full PostgreSQL connection string |
 
 See `Backend/.env.example` for the full template.
 
 ### Frontend — `.env`
 
-| Variable        | Description                 |
-| --------------- | --------------------------- |
-| `VITE_API_URL`  | Backend base URL (optional) |
+| Variable       | Description                 |
+| -------------- | --------------------------- |
+| `VITE_API_URL` | Backend base URL (optional) |
 
 See `Frontend/.env.example` for the full template.
 
@@ -125,14 +125,14 @@ See `Frontend/.env.example` for the full template.
 
 ## API Reference
 
-| Method   | Endpoint           | Description               |
-| -------- | ------------------ | ------------------------- |
-| `GET`    | `/students`        | Retrieve all students     |
-| `GET`    | `/students/{id}`   | Retrieve a single student |
-| `POST`   | `/students`        | Create a new student      |
-| `PUT`    | `/students/{id}`   | Replace a student record  |
-| `PATCH`  | `/students/{id}`   | Partially update a record |
-| `DELETE` | `/students/{id}`   | Delete a student record   |
+| Method   | Endpoint         | Description               |
+| -------- | ---------------- | ------------------------- |
+| `GET`    | `/students`      | Retrieve all students     |
+| `GET`    | `/students/{id}` | Retrieve a single student |
+| `POST`   | `/students`      | Create a new student      |
+| `PUT`    | `/students/{id}` | Replace a student record  |
+| `PATCH`  | `/students/{id}` | Partially update a record |
+| `DELETE` | `/students/{id}` | Delete a student record   |
 
 Interactive API docs are available at `http://localhost:8000/docs` (Swagger UI).
 
@@ -154,15 +154,15 @@ CREATE TABLE students (
 
 ### Frontend
 
-| Command           | Description                     |
-| ----------------- | ------------------------------- |
-| `npm run dev`     | Start development server        |
-| `npm run build`   | Build for production            |
-| `npm run preview` | Preview production build        |
-| `npm run lint`    | Run ESLint                      |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
 
 ### Backend
 
-| Command                       | Description                        |
-| ----------------------------- | ---------------------------------- |
-| `uvicorn main:app --reload`   | Start dev server with auto-reload  |
+| Command                     | Description                       |
+| --------------------------- | --------------------------------- |
+| `uvicorn main:app --reload` | Start dev server with auto-reload |

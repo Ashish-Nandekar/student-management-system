@@ -1,0 +1,63 @@
+# =============================================
+#   ROOT .gitignore
+#   Student Management System
+# =============================================
+
+
+# ──────────────────────────────────────────
+#  🔴 SECRETS — NEVER COMMIT THESE
+# ──────────────────────────────────────────
+.env
+*.env
+!*.env.example        # allow .env.example files through (they have no real secrets)
+
+
+# ──────────────────────────────────────────
+#  🐍 Python / Backend
+# ──────────────────────────────────────────
+Backend/venv/
+Backend/.venv/
+Backend/__pycache__/
+__pycache__/
+*.py[cod]             # covers .pyc .pyo .pyd
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+
+# ──────────────────────────────────────────
+#  ⚛️  Node / Frontend
+# ──────────────────────────────────────────
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.env.local
+Frontend/.env.development.local
+Frontend/.env.test.local
+Frontend/.env.production.local
+
+
+# ──────────────────────────────────────────
+#  🖥️  OS Files
+# ──────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+
+# ──────────────────────────────────────────
+#  🛠️  Editor / IDE
+# ──────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.user

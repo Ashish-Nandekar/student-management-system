@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 
-const BASE_URL = 'https://student-management-system-t74y.onrender.com';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [students, setStudents] = useState([]);

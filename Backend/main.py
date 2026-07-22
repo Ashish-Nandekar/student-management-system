@@ -45,9 +45,8 @@ def get_students():
   connection = get_connection()
   cursor = connection.cursor()
 
-  query = "SELECT * FROM students ORDER BY id ASC"
 
-  cursor.execute(query)
+  cursor.execute("SELECT * FROM students ORDER BY id ASC")
   rows = cursor.fetchall()
   student_list = []
   for row in rows:

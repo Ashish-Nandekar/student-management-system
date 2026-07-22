@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://student-management-system-t74y.onrender.com';
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -40,13 +40,22 @@ function App() {
       alert(response.data.message);
     } else {
       // call put method
-      await axios.put(BASE_URL + '/students/' + studentId, {
+      const response = await axios.put(BASE_URL + '/students/' + studentId, {
         id: studentId,
         name: studentName,
         course: studentCourse,
       });
-      // alert(response.data.message);
+      alert(response.data.message);
+      setIsEditing(false);
     }
+
+    // reset form fields
+    setStudentId('');
+    setStudentName('');
+    setStudentCourse('');
+
+    // refresh the table
+    getStudents();
   }
 
   function editStudentData(student) {
@@ -86,7 +95,7 @@ function App() {
           value={studentCourse}
           onChange={handleCourse}
         />
-        <button onClick={() => sendStudentData()}>
+        <button type="button" onClick={() => sendStudentData()}>
           {isEditing ? 'Update' : 'Submit'}
         </button>
       </form>
